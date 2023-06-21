@@ -3,7 +3,7 @@ using Unity.Mathematics;
 
 namespace Components
 {
-    public partial struct BulletComponent:IComponentData
+    public partial struct BulletComponent:IComponentData,IEnableableComponent
     {
         public float speed;
 

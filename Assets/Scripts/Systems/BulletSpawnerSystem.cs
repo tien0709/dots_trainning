@@ -10,7 +10,7 @@ namespace Systems
     {
         public void OnUpdate(ref SystemState state)
         {
-            var isPressedSpace = Input.GetKeyDown(KeyCode.Space);
+            var isPressedSpace = Input.GetKey(KeyCode.Space);
 
             foreach (var (tf, spawner)
                      in SystemAPI.Query<RefRO<LocalTransform>, RefRW<BulletSpawnerComponent>>()
@@ -29,12 +29,12 @@ namespace Systems
                         state.EntityManager.SetComponentData(newBulletE, new LocalTransform
                         {
                             Position = tf.ValueRO.Position + spawner.ValueRO.offset,
-                            Scale = 1f,
+                            Scale = .2f,
                             Rotation = Quaternion.identity,
                         });
                         state.EntityManager.SetComponentData(newBulletE, new BulletComponent
                         {
-                            speed =  3f,
+                            speed =  8f,
                             direction = calculateDirection(tf),
                         });
                         spawner.ValueRW.lastSpawnedTime = spawner.ValueRO.spawnSpeed;
@@ -50,7 +50,7 @@ namespace Systems
         private float3 calculateDirection(RefRO<LocalTransform> tf)
         {
             //TODO:
-            return new float3(0f, 0f, 1f);
+            return tf.ValueRO.Forward();
         }
     }
 }

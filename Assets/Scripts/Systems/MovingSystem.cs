@@ -10,14 +10,14 @@ namespace Systems
         public void OnUpdate(ref SystemState state)
         {
             foreach (var (tf, moving, range, e) in SystemAPI.Query<RefRW<LocalTransform>
-                         , RefRO<MovingComponent>, RefRO<MovingRange>>().WithNone<ControlledMovingComponent>().WithEntityAccess())
+                         , RefRO<MovingComponent>, RefRO<MovingRange>, EnabledRefRO<EnemyComponent>>())
             {
                 tf.ValueRW.Position.x += moving.ValueRO.moveSpeed * SystemAPI.Time.DeltaTime;
                 if (tf.ValueRW.Position.x < range.ValueRO.minX)
                 {
                     tf.ValueRW.Position.x = range.ValueRO.minX;
                 }
-                 if (tf.ValueRW.Position.x > range.ValueRO.maxX)
+                if (tf.ValueRW.Position.x > range.ValueRO.maxX)
                 {
                     tf.ValueRW.Position.x = range.ValueRO.minX;
                 }

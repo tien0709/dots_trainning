@@ -30,7 +30,6 @@ public class LevelUI : MonoBehaviour
         //_playerEntity luon la null ma start chi cap nhat 1 lan duy nhat nên du ban click start game thi _playerEntity luôn là null
            var level = _entityManager.GetComponentData<LevelComponent>(_playerEntity).Level;
        // them if de dam bao khong bi bug vi ban dau start menu da disable LevelUI va Esc
-           UnityEngine.Debug.Log("ttt");
            Text.text = $"Level:{level}"; 
        }
     }

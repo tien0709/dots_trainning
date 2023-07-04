@@ -16,15 +16,23 @@ public class PointUI : MonoBehaviour
     void Start()
     {
         _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-        _playerEntity = _entityManager.CreateEntityQuery(typeof(PointComponent)).GetSingletonEntity();
+        //_playerEntity = _entityManager.CreateEntityQuery(typeof(PointComponent)).GetSingletonEntity();
     }
 
     // Update is called once per frame
     void Update()
     {
        
-       var point = _entityManager.GetComponentData<PointComponent>(_playerEntity).Point;
-       Text.text = $"Point:{point}"; 
+       //_entityManager.TryGetComponentData<LevelComponent>(_playerEntity)
+        if(!_entityManager.CreateEntityQuery(typeof(PointComponent)).IsEmpty) {
+            _playerEntity = _entityManager.CreateEntityQuery(typeof(PointComponent)).GetSingletonEntity();
+            // phai bo o day khong duoc bo o start vi menu ban dau khien 
+        //_playerEntity luon la null ma start chi cap nhat 1 lan duy nhat nên du ban click start game thi _playerEntity luôn là null
+           var point = _entityManager.GetComponentData<PointComponent>(_playerEntity).Point;
+       // them if de dam bao khong bi bug vi ban dau start menu da disable LevelUI va Esc
+           Text.text = $"Point:{point}"; 
+       }
     }
+    
 }
 }

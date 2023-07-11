@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 5738456081255945930}
   - component: {fileID: 5738456081255945931}
   - component: {fileID: 5738456081255945932}
+  - component: {fileID: 5738456081255945933}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -559,6 +560,19 @@ MonoBehaviour:
   Offset: {x: 0, y: 1, z: -2}
   Angle: 25
   numBox: 5
+--- !u!114 &5738456081255945933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4965438261196524549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9fefd789808854c91acb2c4bf0171c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 10
 --- !u!64 &6046095664335600456
 MeshCollider:
   m_ObjectHideFlags: 0

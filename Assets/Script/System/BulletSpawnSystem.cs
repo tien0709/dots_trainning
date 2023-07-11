@@ -13,7 +13,7 @@ namespace System
         {
             foreach (var (tf, spawn) in SystemAPI.Query<RefRW<LocalTransform>, RefRW<BulletSpawnComponent>>())
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.K))
                 {
                     var newBullet = state.EntityManager.Instantiate(spawn.ValueRW.Prefab);
                     Vector3 axis = new Vector3(0, 5, 0);// Rotation 

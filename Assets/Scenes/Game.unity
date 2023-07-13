@@ -1184,7 +1184,6 @@ GameObject:
   - component: {fileID: 517189103}
   - component: {fileID: 517189105}
   - component: {fileID: 517189106}
-  - component: {fileID: 517189107}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1227,18 +1226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde30725ba4abf645b95cc94d0cf49dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _button: {fileID: 1714116745}
-  PauseButton: {fileID: 1413059203}
-  ReturnButton: {fileID: 58526264}
-  bg: {fileID: 767512628}
-  text: {fileID: 1862649870}
-  esc: {fileID: 414677998}
-  whiteBg: {fileID: 249749303}
-  Time: {fileID: 1852770784}
-  Point: {fileID: 511953618}
-  Level: {fileID: 1916594758}
-  EndLevel: {fileID: 1724595740}
-  EndPoint: {fileID: 17173436}
+  isPause: 0
+  isClickReturn: 0
 --- !u!114 &517189104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,27 +1293,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 517189100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e49e022c655f194c85e38a1645dc90b, type: 3}
+  m_Script: {fileID: 11500000, guid: 981b8a6b3e15f5a47852e812c3677189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 239143485}
---- !u!114 &517189107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517189100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0015a8fb623ee4e9bd2a94f3524ac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startButton: {fileID: 1714116745}
-  text: {fileID: 1862649870}
+  PointEnd: {fileID: 17173436}
+  LevelEnd: {fileID: 1724595740}
+  startText: {fileID: 1862649872}
+  bg: {fileID: 767512628}
   whiteBg: {fileID: 249749303}
-  EndLevel: {fileID: 1724595740}
-  EndPoint: {fileID: 17173436}
+  StartButton: {fileID: 1714116745}
+  PauseButton: {fileID: 1413059203}
+  ReturnButton: {fileID: 58526264}
+  esc: {fileID: 414677998}
+  Point: {fileID: 511953618}
+  Time: {fileID: 1852770784}
+  Level: {fileID: 1916594758}
 --- !u!1 &767512628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,7 +1516,6 @@ GameObject:
   - component: {fileID: 1176866201}
   - component: {fileID: 1176866202}
   - component: {fileID: 1176866203}
-  - component: {fileID: 1176866204}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1672,28 +1654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 1852770784}
---- !u!114 &1176866204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176866196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 695ec8bf2b6b5e141aad66261eac854b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PointEnd: {fileID: 17173436}
-  LevelEnd: {fileID: 1724595740}
-  bg: {fileID: 767512628}
-  whiteBg: {fileID: 249749303}
-  PauseButton: {fileID: 1413059203}
-  ReturnButton: {fileID: 58526264}
-  esc: {fileID: 414677998}
-  Point: {fileID: 511953618}
-  Time: {fileID: 1852770784}
-  Level: {fileID: 1916594758}
 --- !u!1 &1413059201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,19 +1994,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1714116746}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_canvas.StartGameButton, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1714116746
 MonoBehaviour:
   m_ObjectHideFlags: 0

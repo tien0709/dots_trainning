@@ -21,7 +21,10 @@ namespace Components
                     MinRange = authoring.MinRange,
                 });
             }
+
         }
+
+        
     }
 
 }

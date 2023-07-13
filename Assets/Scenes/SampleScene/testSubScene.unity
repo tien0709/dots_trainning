@@ -123,38 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1912475630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1912475631}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1912475631
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912475630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5738456081255945919}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &137678530682881143
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +334,7 @@ GameObject:
   - component: {fileID: 5738456081255945931}
   - component: {fileID: 5738456081255945932}
   - component: {fileID: 5738456081255945933}
+  - component: {fileID: 5738456081255945934}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -389,7 +358,7 @@ Transform:
   - {fileID: 4744854617990298880}
   - {fileID: 8371653277464280284}
   - {fileID: 8116155075783207609}
-  m_Father: {fileID: 1912475631}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -110.14, z: 0}
 --- !u!23 &5738456081255945921
@@ -572,7 +541,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba9fefd789808854c91acb2c4bf0171c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Time: 10
+  Time: 60
+--- !u!114 &5738456081255945934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4965438261196524549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cc2a6d6cedb444989e8b27b7090c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &6046095664335600456
 MeshCollider:
   m_ObjectHideFlags: 0

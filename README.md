@@ -1,3 +1,3 @@
 # TOPEBOX - dots_trainning
-Space shooter - template
-Fork to your account then submit the link
+Gun Game
+Press K button to Spawn Bullet

@@ -42,14 +42,12 @@ namespace UI_canvas
 
         private void CreateExampleSystems()
         {
-            _simulationSystemGroup.AddSystemToUpdateList(_world.CreateSystem<StartGameSystem>());
-           // _simulationSystemGroup.AddSystemToUpdateList(_world.CreateSystem<PauseGameSystem>());
+            _simulationSystemGroup.AddSystemToUpdateList(_world.CreateSystem<ChangeStateGameSystem>());
         }
         
         private void RemoveExampleSystem()
         {
-            _simulationSystemGroup.RemoveSystemFromUpdateList(_world.GetExistingSystem<StartGameSystem>());
-           // _simulationSystemGroup.RemoveSystemFromUpdateList(_world.GetExistingSystem<PauseGameSystem>());
+            _simulationSystemGroup.RemoveSystemFromUpdateList(_world.GetExistingSystem<ChangeStateGameSystem>());
         }
     }
 }

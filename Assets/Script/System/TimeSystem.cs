@@ -11,8 +11,6 @@ namespace System
     {
         public void OnUpdate(ref SystemState state)
         {
-            var horizontalInput = Input.GetAxis("Horizontal");
-            var verticalInput = Input.GetAxis("Vertical");
             foreach (var time in SystemAPI.Query< RefRW<TimeComponent>>())
             {
                 time.ValueRW.Time -=  SystemAPI.Time.DeltaTime;
